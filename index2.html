@@ -19,7 +19,8 @@
         }
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 </head>
 
 <body
@@ -27,43 +28,48 @@
 
     <div class="relative min-h-screen flex flex-col justify-between max-w-[1400px] mx-auto px-6 md:px-12 py-4">
 
-        <div
-            class="absolute top-[20%] left-[-10%] w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[130px] pointer-events-none">
-        </div>
-        <div
-            class="absolute bottom-[10%] right-[-10%] w-[450px] h-[450px] bg-indigo-600/10 rounded-full blur-[120px] pointer-events-none">
-        </div>
 
-        <nav class="flex items-center justify-between w-full relative z-10 py-4">
-            <img src="./img/logo.png" alt="ABFINITY Logo" width="230">
 
-            <div
-                class="hidden md:flex gap-6 items-center bg-[#05020c]/60 backdrop-blur-md border border-white/[0.05] p-1 rounded-full shadow-[0_0_20px_rgba(0,0,0,0.8)]">
-                <a href="index.html"
-                    class="text-gray-400 hover:text-white px-5 py-1.5 text-xs font-medium rounded-full bg-[#080414] border border-purple-500/30 hover:border-purple-500 shadow-[0_0_10px_rgba(124,58,237,0.1)] hover:shadow-[0_0_15px_rgba(124,58,237,0.4)] transition-all duration-300 mx-0.5">
-                    Home
-                </a>
-                <a href="index2.html"
-                    class="text-white px-5 py-1.5 text-xs font-semibold rounded-full bg-[#020005] border-2 border-purple-500 shadow-[0_0_20px_rgba(124,58,237,0.6)] tracking-wide mx-0.5 transform scale-105 relative z-10">
-                    Projects
-                </a>
-                <a href="index3.html"
-                    class="text-gray-400 hover:text-white px-5 py-1.5 text-xs font-medium rounded-full bg-[#080414] border border-purple-500/30 hover:border-purple-500 shadow-[0_0_10px_rgba(124,58,237,0.1)] hover:shadow-[0_0_15px_rgba(124,58,237,0.4)] transition-all duration-300 mx-0.5">
-                    Contact
-                </a>
-                <a href="index4.html"
-                    class="text-gray-400 hover:text-white px-5 py-1.5 text-xs font-medium rounded-full bg-[#080414] border border-purple-500/30 hover:border-purple-500 shadow-[0_0_10px_rgba(124,58,237,0.1)] hover:shadow-[0_0_15px_rgba(124,58,237,0.4)] transition-all duration-300 mx-0.5">
-                    Support Me
-                </a>
-            </div>
+        <nav
+            class="sticky top-0 z-50 w-full h-20 bg-[#05020c]/70 backdrop-blur-md border-b border-white/[0.03] transition-all duration-300 flex items-center">
+            <div class="max-w-[1250px] mx-auto px-6 md:px-12 flex items-center justify-between w-full h-full">
 
-            <div class="md:hidden">
-                <button
-                    class="bg-white/5 border border-white/10 text-white text-xs px-4 py-2 rounded-full font-medium hover:bg-white/10 transition-all">Menu</button>
+                <div class="flex items-center gap-2.5 cursor-pointer group select-none">
+                    <img src="./img/logo.png" alt="Logo" width="120" class="block object-contain" data-aos="fade-right">
+                </div>
+
+                <div class="hidden md:flex gap-6 items-center bg-[#05020c]/60 backdrop-blur-md border border-white/[0.05] p-1 rounded-full shadow-[0_0_20px_rgba(0,0,0,0.8)]"
+                    data-aos="fade-down">
+
+                    <!-- Home (Oddiy holatda) -->
+                    <a href="index.html"
+                        class="text-gray-400 hover:text-white px-5 py-1.5 text-xs font-medium rounded-full bg-[#080414] border-2 border-transparent hover:border-purple-500/50 transition-all duration-300 mx-0.5 relative z-10">
+                        Home
+                    </a>
+
+                    <!-- Projects (Aktiv — binafsha rangda yonib turadi) -->
+                    <a href="index2.html"
+                        class="nav-link text-white px-5 py-1.5 text-xs font-bold rounded-full bg-[#a855f7] shadow-[0_0_20px_rgba(168,85,247,0.75)] transition-all duration-300 mx-0.5 relative z-10">
+                        Projects
+                    </a>
+
+                    <!-- Contact (Oddiy holatda) -->
+                    <a href="index3.html"
+                        class="nav-link text-gray-400 hover:text-white px-5 py-1.5 text-xs font-medium rounded-full bg-[#080414] border-2 border-transparent hover:border-purple-500/50 transition-all duration-300 mx-0.5 relative z-10">
+                        Contact
+                    </a>
+
+
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button
+                        class="bg-white/5 border border-white/10 text-white text-xs px-4 py-2 rounded-full font-medium hover:bg-white/10 transition-all">Menu</button>
+                </div>
+
             </div>
         </nav>
-
-        <div class="text-center space-y-3 pt-16 pb-10 relative z-10">
+        <div class="text-center space-y-3 pt-16 pb-10 relative z-10" data-aos="fade-up">
             <div>
                 <span
                     class="bg-purple-500/10 border border-purple-500/20 text-purple-400 text-[10px] font-bold tracking-[0.2em] uppercase px-3.5 py-1 rounded-full">
@@ -79,35 +85,23 @@
             </p>
         </div>
 
-        <div class="flex flex-wrap items-center justify-center gap-2.5 pb-14 relative z-10" id="filter-buttons">
-            <button data-filter="all"
-                class="filter-btn bg-purple-600 text-white text-[11px] font-medium px-5 py-1.5 rounded-full shadow-md shadow-purple-600/20 transition-all border border-purple-500">All</button>
-            <button data-filter="landing"
-                class="filter-btn bg-white/[0.02] border border-white/[0.05] text-gray-400 hover:text-white hover:bg-white/[0.05] text-[11px] font-medium px-5 py-1.5 rounded-full transition-all">Landing
-                Pages</button>
-            <button data-filter="business"
-                class="filter-btn bg-white/[0.02] border border-white/[0.05] text-gray-400 hover:text-white hover:bg-white/[0.05] text-[11px] font-medium px-5 py-1.5 rounded-full transition-all">Business</button>
-            <button data-filter="portfolio"
-                class="filter-btn bg-white/[0.02] border border-white/[0.05] text-gray-400 hover:text-white hover:bg-white/[0.05] text-[11px] font-medium px-5 py-1.5 rounded-full transition-all">Portfolio</button>
-            <button data-filter="other"
-                class="filter-btn bg-white/[0.02] border border-white/[0.05] text-gray-400 hover:text-white hover:bg-white/[0.05] text-[11px] font-medium px-5 py-1.5 rounded-full transition-all">Other</button>
-        </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto w-full relative z-10 pb-16"
             id="projects-grid">
 
             <div data-category="business"
-                class="project-card bg-[#0b0717]/40 border border-white/[0.04] rounded-2xl overflow-hidden group hover:border-purple-500/20 hover:bg-[#0c081c]/60 transition-all duration-300 shadow-xl flex flex-col justify-between">
+                class="project-card bg-[#0b0717]/40 border border-white/[0.04] rounded-2xl overflow-hidden group hover:border-purple-500/20 hover:bg-[#0c081c]/60 transition-all duration-300 shadow-xl flex flex-col justify-between"
+                data-aos="fade-right">
                 <div class="p-3">
                     <div
                         class="aspect-[16/10] w-full bg-slate-950 rounded-xl overflow-hidden relative border border-white/[0.02]">
-                        <img src="./img/project1.png" alt="Restaurant Website"
+                        <img src="./img/rest.jpg" alt="Restaurant Website"
                             class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500">
                     </div>
                 </div>
                 <div class="px-5 pb-5 pt-2 flex items-center justify-between">
                     <div class="space-y-2">
-                        <h3 class="text-sm font-semibold text-white tracking-wide">Restaurant Website</h3>
+                        <img src="" alt="">
                         <p class="text-[11px] text-gray-500 leading-relaxed max-w-[280px]">A modern restaurant website
                             with online reservation.</p>
                         <div class="flex items-center gap-1.5 pt-1">
@@ -127,11 +121,12 @@
             </div>
 
             <div data-category="portfolio"
-                class="project-card bg-[#0b0717]/40 border border-white/[0.04] rounded-2xl overflow-hidden group hover:border-purple-500/20 hover:bg-[#0c081c]/60 transition-all duration-300 shadow-xl flex flex-col justify-between">
+                class="project-card bg-[#0b0717]/40 border border-white/[0.04] rounded-2xl overflow-hidden group hover:border-purple-500/20 hover:bg-[#0c081c]/60 transition-all duration-300 shadow-xl flex flex-col justify-between"
+                data-aos="fade-left">
                 <div class="p-3">
                     <div
                         class="aspect-[16/10] w-full bg-slate-950 rounded-xl overflow-hidden relative border border-white/[0.02]">
-                        <img src="./img/project2.png" alt="Portfolio Website"
+                        <img src="./img/port.webp" alt="Portfolio Website"
                             class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500">
                     </div>
                 </div>
@@ -156,11 +151,12 @@
             </div>
 
             <div data-category="landing"
-                class="project-card bg-[#0b0717]/40 border border-white/[0.04] rounded-2xl overflow-hidden group hover:border-purple-500/20 hover:bg-[#0c081c]/60 transition-all duration-300 shadow-xl flex flex-col justify-between">
+                class="project-card bg-[#0b0717]/40 border border-white/[0.04] rounded-2xl overflow-hidden group hover:border-purple-500/20 hover:bg-[#0c081c]/60 transition-all duration-300 shadow-xl flex flex-col justify-between"
+                data-aos="fade-right">
                 <div class="p-3">
                     <div
                         class="aspect-[16/10] w-full bg-slate-950 rounded-xl overflow-hidden relative border border-white/[0.02]">
-                        <img src="./img/project3.png" alt="Business Landing Page"
+                        <img src="./img/buss.jpg" alt="Business Landing Page"
                             class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500">
                     </div>
                 </div>
@@ -185,11 +181,12 @@
             </div>
 
             <div data-category="business"
-                class="project-card bg-[#0b0717]/40 border border-white/[0.04] rounded-2xl overflow-hidden group hover:border-purple-500/20 hover:bg-[#0c081c]/60 transition-all duration-300 shadow-xl flex flex-col justify-between">
+                class="project-card bg-[#0b0717]/40 border border-white/[0.04] rounded-2xl overflow-hidden group hover:border-purple-500/20 hover:bg-[#0c081c]/60 transition-all duration-300 shadow-xl flex flex-col justify-between"
+                data-aos="fade-left">
                 <div class="p-3">
                     <div
                         class="aspect-[16/10] w-full bg-slate-950 rounded-xl overflow-hidden relative border border-white/[0.02]">
-                        <img src="./img/project4.png" alt="E-Commerce Website"
+                        <img src="./img/ee.jpg" alt="E-Commerce Website"
                             class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500">
                     </div>
                 </div>
@@ -215,11 +212,12 @@
             </div>
 
             <div data-category="landing"
-                class="project-card bg-[#0b0717]/40 border border-white/[0.04] rounded-2xl overflow-hidden group hover:border-purple-500/20 hover:bg-[#0c081c]/60 transition-all duration-300 shadow-xl flex flex-col justify-between">
+                class="project-card bg-[#0b0717]/40 border border-white/[0.04] rounded-2xl overflow-hidden group hover:border-purple-500/20 hover:bg-[#0c081c]/60 transition-all duration-300 shadow-xl flex flex-col justify-between"
+                data-aos="fade-right">
                 <div class="p-3">
                     <div
                         class="aspect-[16/10] w-full bg-slate-950 rounded-xl overflow-hidden relative border border-white/[0.02]">
-                        <img src="./img/project5.png" alt="SaaS Landing Page"
+                        <img src="./img/saas.webp" alt="SaaS Landing Page"
                             class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500">
                     </div>
                 </div>
@@ -244,11 +242,12 @@
             </div>
 
             <div data-category="other"
-                class="project-card bg-[#0b0717]/40 border border-white/[0.04] rounded-2xl overflow-hidden group hover:border-purple-500/20 hover:bg-[#0c081c]/60 transition-all duration-300 shadow-xl flex flex-col justify-between">
+                class="project-card bg-[#0b0717]/40 border border-white/[0.04] rounded-2xl overflow-hidden group hover:border-purple-500/20 hover:bg-[#0c081c]/60 transition-all duration-300 shadow-xl flex flex-col justify-between"
+                data-aos="fade-left">
                 <div class="p-3">
                     <div
                         class="aspect-[16/10] w-full bg-slate-950 rounded-xl overflow-hidden relative border border-white/[0.02]">
-                        <img src="./img/project6.png" alt="Blog Website"
+                        <img src="./img/blog.png" alt="Blog Website"
                             class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500">
                     </div>
                 </div>
@@ -276,7 +275,7 @@
         </div>
 
         <!-- 5. SOCIAL PROOF PANEL (GITHUB ACTIVITY & LOAD MORE O'RNIGA) -->
-        <div class="max-w-5xl mx-auto w-full pb-20 relative z-10">
+        <div class="max-w-5xl mx-auto w-full pb-20 relative z-10" data-aos="fade-up">
             <div
                 class="bg-[#0b0717]/30 border border-white/[0.04] rounded-2xl p-8 backdrop-blur-sm relative overflow-hidden group hover:border-purple-500/20 transition-all duration-300">
 
@@ -350,14 +349,22 @@
             </div>
         </div>
 
-        <div class="max-w-5xl mx-auto border-t border-white/[0.05] pt-10 w-full space-y-8 relative z-10">
+        <footer class="max-w-[1250px] mx-auto px-6 md:px-12 pt-20 pb-8 w-full" data-aos="fade-up">
+            <div
+                class="max-w-4xl mx-auto bg-gradient-to-r from-indigo-950 via-purple-900 to-indigo-950 border border-purple-500/30 rounded-3xl p-8 text-center space-y-4 mb-16 shadow-[0_0_40px_rgba(124,58,237,0.15)]">
+                <h2 class="text-xl md:text-2xl font-bold text-white">Ready to create your website?</h2>
+                <p class="text-xs text-purple-200 max-w-sm mx-auto">Let's discuss your project and bring your vision to
+                    life.</p>
+                <a href="index3.html"
+                    class="inline-block px-6 py-2 bg-white text-purple-900 text-xs font-bold rounded-full shadow-md hover:bg-purple-100 transition-all transform hover:scale-105">
+                    Contact Me
+                </a>
+            </div>
+
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-left">
                 <div class="space-y-3">
                     <div class="flex items-center gap-2">
-                        <div
-                            class="w-5 h-5 flex items-center justify-center bg-purple-600 rounded text-[10px] text-white font-bold">
-                            ∞</div>
-                        <span class="text-white font-semibold text-xs tracking-wider">ABFINITY</span>
+                        <img src="./img/logo.png" alt="Logo" width="100" class="block object-contain">
                     </div>
                     <p class="text-[11px] text-gray-500 leading-relaxed">Building high quality websites that make an
                         impact.</p>
@@ -365,37 +372,62 @@
                 <div class="space-y-2.5">
                     <h4 class="text-xs font-bold text-white uppercase tracking-wider">Quick Links</h4>
                     <div class="flex flex-col space-y-1.5 text-[11px] text-gray-500">
-                        <a href="index.html" class="hover:text-purple-400 transition-colors">Home</a>
-                        <a href="#" class="hover:text-purple-400 transition-colors">Projects</a>
+                        <a href="#" class="hover:text-purple-400 transition-colors">Home</a>
+                        <a href="index2.html" class="hover:text-purple-400 transition-colors">Projects</a>
                         <a href="index3.html" class="hover:text-purple-400 transition-colors">Contact</a>
-                        <a href="index4.html" class="hover:text-purple-400 transition-colors">Support Me</a>
+
                     </div>
                 </div>
                 <div class="space-y-2.5">
                     <h4 class="text-xs font-bold text-white uppercase tracking-wider">Let's Connect</h4>
                     <div class="flex flex-col space-y-1.5 text-[11px] text-gray-500">
-                        <a href="#" class="hover:text-purple-400 transition-colors">Telegram</a>
-                        <a href="#" class="hover:text-purple-400 transition-colors">LinkedIn</a>
-                        <a href="#" class="hover:text-purple-400 transition-colors">Instagram</a>
+                        <a href="https://t.me/ABFINITY1" class="hover:text-purple-400 transition-colors">Telegram</a>
+                        <a href="https://www.linkedin.com/in/muhammadsodiq-jurayev-a25538413"
+                            class="hover:text-purple-400 transition-colors">LinkedIn</a>
+                        <a href="https://wa.me/qr/KCLIC6TUJBDAE1"
+                            class="hover:text-purple-400 transition-colors">WhatsApp</a>
                     </div>
                 </div>
-                <div class="space-y-2.5">
+                <div class="space-y-2.5 ">
                     <h4 class="text-xs font-bold text-white uppercase tracking-wider">Email</h4>
-                    <p class="text-[11px] text-gray-500">hello@abfinity.dev</p>
+                    <p class="text-[11px] text-gray-500">caelor.exe@gmail.com</p>
                 </div>
             </div>
 
             <div
                 class="flex flex-col sm:flex-row items-center justify-between border-t border-white/[0.03] pt-6 text-[10px] text-gray-600">
-                <a href="#" class="hover:text-gray-400">&copy; 2026 ABFINITY. All rights reserved.</a>
-                <a href="#" class="hover:text-gray-400">Build by ABFINITY</a>
-                <div class="flex gap-4 mt-2 sm:mt-0">
-                    <a href="#" class="hover:text-gray-400">Privacy Policy</a>
-                    <a href="#" class="hover:text-gray-400">Terms of Service</a>
-                </div>
+                <span>&copy; 2026 ABFINITY. All rights reserved.</span>
+                <span>Build by ABFINITY</span>
             </div>
-        </div>
     </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // AOS skriptini faollashtirish
+        AOS.init({
+            duration: 800,     // Animatsiya davomiyligi (millisekundda)
+            offset: 100,       // Element ko'rinishidan qancha oldin animatsiya boshlanishi
+            once: true,        // Animatsiya faqat bir marta (pastga tushganda) ishlashi uchun
+            easing: 'ease-out' // Silliq yakunlanish effekti
+        });
+
+        // Testimonial Slider Script
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('testimonial-container');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+
+            if (container && prevBtn && nextBtn) {
+                const getScrollAmount = () => {
+                    const firstCard = container.querySelector('.snap-start');
+                    return firstCard ? firstCard.clientWidth + 24 : 300;
+                };
+                nextBtn.addEventListener('click', () => { container.scrollLeft += getScrollAmount(); });
+                prevBtn.addEventListener('click', () => { container.scrollLeft -= getScrollAmount(); });
+            }
+        });
+    </script>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -425,6 +457,77 @@
                         }
                     });
                 });
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentUrl = window.location.href.toLowerCase();
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            navLinks.forEach(link => {
+                const linkHref = link.getAttribute('href').toLowerCase();
+
+                if (currentUrl.includes(linkHref) || (linkHref === 'index.html' && (currentUrl.endsWith('/') || currentUrl.endsWith('index2.html') || !currentUrl.includes('.html')))) {
+
+                    // 1. Eski barcha klasslarni (fon, matn rangi, hoshiya va soyalarni) butunlay o'chiramiz
+                    link.className = "nav-link text-white font-semibold bg-purple-600 shadow-[0_0_25px_rgba(124,58,237,0.7)] scale-105 px-5 py-1.5 text-xs rounded-full mx-0.5 relative z-10 border-none transition-all duration-300";
+
+                }
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentUrl = window.location.href.toLowerCase();
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            navLinks.forEach(link => {
+                const linkHref = link.getAttribute('href').toLowerCase();
+
+                // Active sahifani aniqlash sharti
+                if (currentUrl.includes(linkHref) || (linkHref === 'index.html' && (currentUrl.endsWith('/') || currentUrl.endsWith('index.html') || !currentUrl.includes('.html')))) {
+
+                    // Eski passiv klasslarni o'chirish
+                    link.classList.remove('text-gray-400', 'font-medium', 'bg-[#080414]', 'border-transparent', 'shadow-[0_0_10px_rgba(124,58,237,0.1)]');
+
+                    // YANGI ACTIVE KLASSLAR (Hoshiya o'lchami saqlab qolindi, faqat rangi fon bilan bir xil qilindi)
+                    link.classList.add(
+                        'text-white',
+                        'font-semibold',
+                        'bg-purple-600',
+                        'border-purple-600',                     // Piksel o'zgarmasligi uchun border saqlandi
+                        'shadow-[0_0_25px_rgba(124,58,237,0.7)]',
+                        'scale-105'
+                    );
+                }
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentUrl = window.location.href.toLowerCase();
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            navLinks.forEach(link => {
+                const linkHref = link.getAttribute('href').toLowerCase();
+
+                // Active sahifani aniqlash sharti
+                if (currentUrl.includes(linkHref) || (linkHref === 'index.html' && (currentUrl.endsWith('/') || currentUrl.endsWith('index.html') || !currentUrl.includes('.html')))) {
+
+                    // Eski passiv klasslarni o'chirish
+                    link.classList.remove('text-gray-400', 'font-medium', 'bg-[#080414]', 'border-transparent', 'shadow-[0_0_10px_rgba(124,58,237,0.1)]');
+
+                    // YANGI ACTIVE KLASSLAR (Hoshiya o'lchami saqlab qolindi, faqat rangi fon bilan bir xil qilindi)
+                    link.classList.add(
+                        'text-white',
+                        'font-semibold',
+                        'bg-purple-600',
+                        'border-purple-600',                     // Piksel o'zgarmasligi uchun border saqlandi
+                        'shadow-[0_0_25px_rgba(124,58,237,0.7)]',
+                        'scale-105'
+                    );
+                }
             });
         });
     </script>
